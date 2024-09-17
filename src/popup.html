@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarize for me</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <script type="module" src="./js/script.js"></script>
+   
+</head>
+<body>
+    <header class="header">
+        <h1> Web Summary </h1>
+    </header>
+    
+    <form class="form">
+        <div class="form-group">
+            <label for="sentences"> Sentences </label>
+            <input id="sentences" type="number" value="5" />
+        </div>
+        <div class="buttons">
+            <button id="bSummary" class="blueButtons" type="button"> Summarize this page</button>
+            <div id="tooltip" class="tooltip">Disabled</div>
+            <!-- <a id="bDoc" href="doc.html"> Send a document</a> -->
+            <button class="disabled" disabled> Send a document </button>
+        </div>
+    </form>
+    
+    <p id="text"> </p>
+<body>
+</html>
