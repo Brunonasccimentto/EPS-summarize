@@ -3,23 +3,23 @@ A Summarize for me é uma aplicação web que utiliza a API do MeaningCloud para
 
 Índice
 
-- [Arquitetura do Sistema](#)
-- [Diagrama UML](#)
-- [Diagrama de Sequência](#)
-- [Diagrama de Caso de Uso](#)
-- [APIs](#)
-- [Requisição para MeaningCloud](#)
-- [Exemplo de Requisição](#)
-- [Estrutura de Dados](#)
-- [Como Executar](#)
-- [Testes](#)
+- [Arquitetura do Sistema](#Arquitetura-do-Sistema)
+- [Diagrama UML](#Diagrama-UML)
+- [Diagrama de Sequência](#Diagrama-de-Sequência)
+- [Diagrama de Caso de Uso](#Diagrama-de-Caso-de-Uso)
+- [APIs](#APIs)
+- [Requisição para MeaningCloud](#Requisição-para-MeaningCloud)
+- [Exemplo de Requisição](#Exemplo-de-Requisição)
+- [Estrutura de Dados](#Estrutura-de-Dados)
+- [Como Executar](#Como-Executar)
+- [Testes](#Testes)
 
 ## Arquitetura do Sistema
 A aplicação segue uma arquitetura cliente-servidor composta pelos seguintes componentes:
 
 - Frontend (Cliente): Desenvolvido em HTML/CSS/JavaScript, gerencia a interface com o usuário e faz requisições à API.
 - Backend (API MeaningCloud): Um serviço externo que realiza a sumarização de conteúdo.
-Google Chrome API: Utilizada para obter a URL da aba ativa do navegador para a sumarização de páginas da web.
+- Google Chrome API: Utilizada para obter a URL da aba ativa do navegador para a sumarização de páginas da web.
 
 ## Diagrama UML
 
@@ -39,10 +39,14 @@ URL:
 "https://meaningcloud-summarization-v1.p.rapidapi.com/summarization-1.0"
 
 ### Parâmetros
-sentences: Número de sentenças desejadas no resumo.
-url: URL da página da web a ser resumida.
-doc: Documento a ser resumido (não suportado via query string GET).
+- sentences: Número de sentenças desejadas no resumo.
+- url: URL da página da web a ser resumida.
+- doc: Documento a ser resumido (não suportado via query string GET).
+- 
 Exemplo de Requisição
+```markdown
+'https://meaningcloud-summarization-v1.p.rapidapi.com/summarization-1.0?sentences=5&url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStar_Trek'
+```
 
 Resposta: 
 A API retorna um objeto JSON com o resumo do conteúdo fornecido:
@@ -58,9 +62,9 @@ A API retorna um objeto JSON com o resumo do conteúdo fornecido:
 ```
 
 ## Estrutura de Dados
-Número de Sentenças: int
-URL: string
-Documento: file
+- sentences: int
+- url: string
+- Document: file
 
 ## Requisitos
 - Node.js (para rodar testes e desenvolvimento local)
