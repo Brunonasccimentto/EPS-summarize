@@ -1,0 +1,1 @@
+export const baseUrl = "https://meaningcloud-summarization-v1.p.rapidapi.com/summarization-1.0";
